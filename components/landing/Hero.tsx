@@ -13,10 +13,10 @@ export default function Hero() {
         fill
         priority
         sizes="100vw"
-        className="object-cover opacity-45"
+        className="object-cover opacity-75"
       />
 
-      <div className="absolute inset-0 bg-gradient-to-r from-[#071526] via-[#071526]/85 to-[#071526]/30" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#071526]/90 via-[#071526]/60 to-[#071526]/20" />
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-6 py-32">
         <motion.div
