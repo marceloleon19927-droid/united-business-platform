@@ -3,22 +3,22 @@ import Image from "next/image";
 const projects = [
   {
     title: "Commercial Cleaning",
-    image: "/images/portfolio/cleaning.jpeg",
+    image: "/images/portfolio/cleaning.png",
     category: "Facility Services",
   },
   {
     title: "Facility Maintenance",
-    image: "/images/portfolio/maintenance.jpeg",
+    image: "/images/portfolio/maintenance.png",
     category: "Maintenance",
   },
   {
     title: "Website Development",
-    image: "/images/portfolio/web.jpeg",
+    image: "/images/portfolio/web.png",
     category: "Digital Solutions",
   },
   {
     title: "AI Automation",
-    image: "/images/portfolio/ai.jpeg",
+    image: "/images/portfolio/ai.png",
     category: "Artificial Intelligence",
   },
 ];
