@@ -1,84 +1,183 @@
 "use client";
 
-"use client";
-
 import { motion } from "framer-motion";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden bg-[#071526] px-6 pt-24 text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#C8A14A33,transparent_35%),radial-gradient(circle_at_bottom_left,#1E3A5F,transparent_35%)]" />
+    <section className="relative overflow-hidden bg-[#071526] text-white">
 
-      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2">
-        <motion.div
-          initial={{ opacity: 0, y: 35 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <p className="mb-5 text-sm font-bold uppercase tracking-[0.35em] text-[#C8A14A]">
-            Commercial Services • Digital Solutions • AI Automation
-          </p>
+      {/* Background */}
+      <div className="absolute inset-0">
 
-          <h1 className="mb-6 text-5xl font-black leading-tight md:text-7xl">
-            Building Better Businesses.
-          </h1>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#C8A14A40,transparent_35%)]" />
 
-          <p className="mb-9 max-w-2xl text-lg leading-8 text-gray-300">
-            We help companies grow through facility services, professional
-            cleaning, websites, marketing, CRM systems and AI automation.
-          </p>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,#1E3A5F,transparent_40%)]" />
 
-          <div className="flex flex-wrap gap-4">
-            <a
-              href="#contact"
-              className="rounded-full bg-[#C8A14A] px-8 py-4 font-bold text-[#071526]"
-            >
-              Get Free Consultation
-            </a>
+      </div>
 
-            <a
-              href="#services"
-              className="rounded-full border border-white/20 px-8 py-4 font-bold text-white"
-            >
-              Explore Services
-            </a>
-          </div>
-        </motion.div>
+      <div className="relative mx-auto flex min-h-screen max-w-7xl items-center px-6 py-32">
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.92 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9 }}
-          className="rounded-[40px] border border-white/10 bg-white/10 p-8 shadow-2xl backdrop-blur-xl"
-        >
-          <div className="rounded-[30px] bg-white p-8 text-[#071526]">
-            <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-[#C8A14A]">
-              United Platform
+        <div className="grid w-full gap-20 lg:grid-cols-2">
+
+          {/* LEFT */}
+
+          <motion.div
+            initial={{ opacity:0,y:40 }}
+            animate={{ opacity:1,y:0 }}
+            transition={{ duration:.8 }}
+          >
+
+            <span className="rounded-full border border-[#C8A14A]/30 bg-[#C8A14A]/10 px-5 py-2 text-sm uppercase tracking-[0.35em] text-[#C8A14A]">
+
+              Commercial Services • Technology • AI
+
+            </span>
+
+            <h1 className="mt-8 text-6xl font-black leading-[1.05] md:text-8xl">
+
+              Elevating
+
+              <span className="block text-[#C8A14A]">
+
+                Commercial Excellence
+
+              </span>
+
+            </h1>
+
+            <p className="mt-8 max-w-2xl text-xl leading-9 text-gray-300">
+
+              United delivers commercial cleaning,
+              facility maintenance,
+              digital transformation,
+              business automation and AI-powered
+              solutions that help organizations
+              operate smarter and grow faster.
+
             </p>
 
-            <h3 className="mb-5 text-3xl font-black">
-              Services, Technology & Growth in one place.
-            </h3>
+            <div className="mt-12 flex flex-wrap gap-5">
 
-            <div className="grid gap-4">
+              <a
+                href="#contact"
+                className="flex items-center gap-3 rounded-full bg-[#C8A14A] px-10 py-5 font-bold text-[#071526] transition hover:scale-105"
+              >
+                Request Proposal
+
+                <ArrowRight size={20} />
+
+              </a>
+
+              <a
+                href="#services"
+                className="rounded-full border border-white/20 px-10 py-5 font-semibold transition hover:bg-white hover:text-[#071526]"
+              >
+                Explore Services
+              </a>
+
+            </div>
+
+            <div className="mt-14 grid gap-5 md:grid-cols-2">
+
               {[
                 "Commercial Cleaning",
                 "Facility Maintenance",
-                "Website Development",
-                "AI Automation",
-                "CRM Systems",
-              ].map((item) => (
+                "Business Technology",
+                "Artificial Intelligence"
+              ].map((item)=>(
                 <div
                   key={item}
-                  className="rounded-2xl bg-[#F8FAFC] p-4 font-bold"
+                  className="flex items-center gap-3"
                 >
-                  {item}
+
+                  <CheckCircle2
+                    className="text-[#C8A14A]"
+                    size={22}
+                  />
+
+                  <span className="text-lg">
+
+                    {item}
+
+                  </span>
+
                 </div>
               ))}
+
             </div>
-          </div>
-        </motion.div>
+
+          </motion.div>
+
+          {/* RIGHT */}
+
+          <motion.div
+            initial={{ opacity:0,scale:.9 }}
+            animate={{ opacity:1,scale:1 }}
+            transition={{ duration:.9 }}
+            className="relative flex items-center justify-center"
+          >
+
+            <div className="absolute h-[520px] w-[520px] rounded-full bg-[#C8A14A]/10 blur-[140px]" />
+
+            <div className="relative w-full rounded-[40px] border border-white/10 bg-white/10 p-8 backdrop-blur-2xl">
+
+              <div className="rounded-[30px] bg-white p-10 text-[#071526]">
+
+                <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#C8A14A]">
+
+                  UNITED BUSINESS PLATFORM
+
+                </p>
+
+                <h2 className="mt-4 text-4xl font-black">
+
+                  Everything Your Business Needs.
+
+                </h2>
+
+                <p className="mt-5 leading-8 text-gray-600">
+
+                  Commercial services,
+                  CRM,
+                  websites,
+                  digital marketing,
+                  AI automation
+                  and business growth
+                  in one integrated platform.
+
+                </p>
+
+                <div className="mt-10 grid gap-4">
+
+                  {[
+                    "Commercial Cleaning",
+                    "Facility Maintenance",
+                    "Web Development",
+                    "Digital Marketing",
+                    "CRM Platform",
+                    "AI Automation"
+                  ].map((service)=>(
+                    <div
+                      key={service}
+                      className="rounded-2xl bg-[#F5F7FA] p-5 font-semibold"
+                    >
+                      {service}
+                    </div>
+                  ))}
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </motion.div>
+
+        </div>
+
       </div>
+
     </section>
   );
 }

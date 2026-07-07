@@ -1,33 +1,68 @@
-export default function Portfolio() {
-  const projects = [
-    "Corporate Website",
-    "Business CRM",
-    "AI Automation",
-    "Social Media Strategy",
-  ];
+import Image from "next/image";
 
+const projects = [
+  {
+    title: "Commercial Cleaning",
+    image: "/images/portfolio/cleaning.jpeg",
+    category: "Facility Services",
+  },
+  {
+    title: "Facility Maintenance",
+    image: "/images/portfolio/maintenance.jpeg",
+    category: "Maintenance",
+  },
+  {
+    title: "Website Development",
+    image: "/images/portfolio/web.jpeg",
+    category: "Digital Solutions",
+  },
+  {
+    title: "AI Automation",
+    image: "/images/portfolio/ai.jpeg",
+    category: "Artificial Intelligence",
+  },
+];
+
+export default function Portfolio() {
   return (
-    <section className="bg-[#F8FAFC] px-6 py-28">
+    <section id="portfolio" className="bg-[#F8FAFC] px-6 py-28">
       <div className="mx-auto max-w-7xl">
-        <p className="mb-3 text-sm font-bold uppercase tracking-[0.35em] text-[#C8A14A]">
-          PORTFOLIO
+        <p className="mb-4 text-sm font-bold uppercase tracking-[0.35em] text-[#C8A14A]">
+          Portfolio
         </p>
 
-        <h2 className="mb-14 max-w-4xl text-5xl font-black text-[#071526]">
-          Digital work designed to help businesses look professional and grow.
+        <h2 className="mb-16 max-w-5xl text-5xl font-black leading-tight text-[#071526]">
+          Solutions designed to elevate businesses.
         </h2>
 
-        <div className="grid gap-8 md:grid-cols-4">
-          {projects.map((item) => (
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+          {projects.map((project) => (
             <div
-              key={item}
-              className="rounded-[30px] bg-white p-8 shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
+              key={project.title}
+              className="group overflow-hidden rounded-[32px] bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-2xl"
             >
-              <div className="mb-6 h-40 rounded-3xl bg-gradient-to-br from-[#071526] to-[#C8A14A]" />
-              <h3 className="text-xl font-black text-[#071526]">{item}</h3>
-              <p className="mt-3 text-gray-600">
-                Premium business solution created for modern companies.
-              </p>
+              <div className="relative h-56 overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition duration-700 group-hover:scale-110"
+                />
+              </div>
+
+              <div className="p-8">
+                <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#C8A14A]">
+                  {project.category}
+                </p>
+
+                <h3 className="mt-3 text-2xl font-black text-[#071526]">
+                  {project.title}
+                </h3>
+
+                <p className="mt-4 leading-7 text-gray-600">
+                  Premium business solution created for modern companies.
+                </p>
+              </div>
             </div>
           ))}
         </div>

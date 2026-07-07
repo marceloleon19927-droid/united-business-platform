@@ -9,12 +9,15 @@ import Portfolio from "@/components/landing/Portfolio";
 import WhyChoose from "@/components/landing/WhyChoose";
 import CTA from "@/components/landing/CTA";
 import Contact from "@/components/landing/Contact";
+import Trusted from "@/components/landing/Trusted";
+
 
 export default function Home() {
   return (
     <main>
       <Navbar />
       <Hero />
+      <Trusted />
       <Stats />
       <Services />
       <Industries />
